@@ -1,7 +1,7 @@
 {
   "expo": {
     "name": "UserListApp",
-    "slug": "UserListApp",
+    "slug": "userlistapp",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
@@ -12,7 +12,7 @@
       "bundleIdentifier": "com.learning.user-list",
       "supportsTablet": true,
       "config": {
-        "googleMapsApiKey":  "AIzaSyCdU1Huu5asxa31H8bObeXLYvR09qc0ffA"
+        "googleMapsApiKey": "AIzaSyCdU1Huu5asxa31H8bObeXLYvR09qc0ffA"
       }
     },
     "android": {
@@ -47,6 +47,13 @@
     ],
     "experiments": {
       "typedRoutes": true
-    }
+    },
+    "extra": {
+      "router": {},
+      "eas": {
+        "projectId": "828439cd-8b23-4bff-91c1-caee183a53e7"
+      }
+    },
+    "owner": "qoriib"
   }
 }
