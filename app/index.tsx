@@ -31,11 +31,15 @@ export default function UserListScreen() {
     return (
       <View
         style={{
-          margin: 10,
+          marginVertical: 8,
           padding: 15,
-          backgroundColor: "#fff",
-          borderRadius: 10,
-          elevation: 3,
+          backgroundColor: "#f0f0f0",
+          borderRadius: 12,
+          shadowColor: "#000",
+          shadowOffset: { width: 0, height: 1 },
+          shadowOpacity: 0.1,
+          shadowRadius: 2,
+          elevation: 2,
         }}
       >
         <View style={{ flexDirection: "row", alignItems: "center" }}>
@@ -43,13 +47,19 @@ export default function UserListScreen() {
             source={{
               uri: `https://randomuser.me/api/portraits/men/${id}.jpg`,
             }}
-            style={{ width: 60, height: 60, borderRadius: 30, marginRight: 10 }}
+            style={{
+              width: 60,
+              height: 60,
+              borderRadius: 30,
+              marginRight: 12,
+              backgroundColor: "#ccc",
+            }}
           />
-          <View>
-            <Text>ID: {id}</Text>
-            <Text>Name: {name}</Text>
-            <Text>Username: {username}</Text>
-            <Text>Email: {email}</Text>
+          <View style={{ flex: 1 }}>
+            <Text style={{ fontWeight: "bold", color: "#333" }}>ID: {id}</Text>
+            <Text style={{ color: "#333" }}>Name: {name}</Text>
+            <Text style={{ color: "#333" }}>Username: {username}</Text>
+            <Text style={{ color: "#333" }}>Email: {email}</Text>
           </View>
         </View>
 
@@ -63,9 +73,9 @@ export default function UserListScreen() {
           }}
           asChild
         >
-          <Pressable style={{ marginTop: 10 }}>
-            <Text style={{ color: "#1976D2", fontWeight: "bold" }}>
-              {street}, {city}, {zipcode}
+          <Pressable style={{ marginTop: 12 }}>
+            <Text style={{ color: "#546e7a", fontWeight: "bold" }}>
+              📍 {street}, {city}, {zipcode}
             </Text>
           </Pressable>
         </Link>
@@ -75,19 +85,28 @@ export default function UserListScreen() {
 
   if (loading) {
     return (
-      <View style={{ flex: 1, justifyContent: "center", alignItems: "center" }}>
-        <ActivityIndicator size="large" color="#1976D2" />
-        <Text>Loading users...</Text>
+      <View
+        style={{
+          flex: 1,
+          justifyContent: "center",
+          alignItems: "center",
+          backgroundColor: "#e5e5e5",
+        }}
+      >
+        <ActivityIndicator size="large" color="#546e7a" />
+        <Text style={{ color: "#333", marginTop: 10 }}>Loading users...</Text>
       </View>
     );
   }
 
   return (
-    <FlatList
-      data={users}
-      renderItem={renderItem}
-      keyExtractor={(item) => item.id.toString()}
-      contentContainerStyle={{ padding: 10 }}
-    />
+    <View style={{ flex: 1, backgroundColor: "#e5e5e5" }}>
+      <FlatList
+        data={users}
+        renderItem={renderItem}
+        keyExtractor={(item) => item.id.toString()}
+        contentContainerStyle={{ padding: 12 }}
+      />
+    </View>
   );
 }

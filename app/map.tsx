@@ -52,6 +52,7 @@ export default function MapScreen() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+    backgroundColor: "#e5e5e5",
   },
   zoomControls: {
     position: "absolute",
@@ -60,14 +61,19 @@ const styles = StyleSheet.create({
     alignItems: "center",
   },
   button: {
-    backgroundColor: "#ffffffcc",
+    backgroundColor: "#f0f0f0dd",
     borderRadius: 30,
     padding: 12,
     marginVertical: 6,
-    elevation: 5,
+    elevation: 4,
+    shadowColor: "#000",
+    shadowOpacity: 0.1,
+    shadowOffset: { width: 0, height: 1 },
+    shadowRadius: 2,
   },
   buttonText: {
     fontSize: 20,
     fontWeight: "bold",
+    color: "#333",
   },
 });
