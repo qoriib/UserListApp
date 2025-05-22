@@ -9,14 +9,24 @@
     "userInterfaceStyle": "automatic",
     "newArchEnabled": true,
     "ios": {
-      "supportsTablet": true
+      "bundleIdentifier": "com.learning.user-list",
+      "supportsTablet": true,
+      "config": {
+        "googleMapsApiKey":  "AIzaSyCdU1Huu5asxa31H8bObeXLYvR09qc0ffA"
+      }
     },
     "android": {
+      "package": "com.learning.user-list",
       "adaptiveIcon": {
         "foregroundImage": "./assets/images/adaptive-icon.png",
         "backgroundColor": "#ffffff"
       },
-      "edgeToEdgeEnabled": true
+      "edgeToEdgeEnabled": true,
+      "config": {
+        "googleMaps": {
+          "apiKey": "AIzaSyCdU1Huu5asxa31H8bObeXLYvR09qc0ffA"
+        }
+      }
     },
     "web": {
       "bundler": "metro",
