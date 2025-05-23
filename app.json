@@ -9,14 +9,14 @@
     "userInterfaceStyle": "automatic",
     "newArchEnabled": true,
     "ios": {
-      "bundleIdentifier": "com.learning.user-list",
+      "bundleIdentifier": "com.learning.userlist",
       "supportsTablet": true,
       "config": {
         "googleMapsApiKey": "AIzaSyCdU1Huu5asxa31H8bObeXLYvR09qc0ffA"
       }
     },
     "android": {
-      "package": "com.learning.user-list",
+      "package": "com.learning.userlist",
       "adaptiveIcon": {
         "foregroundImage": "./assets/images/adaptive-icon.png",
         "backgroundColor": "#ffffff"
